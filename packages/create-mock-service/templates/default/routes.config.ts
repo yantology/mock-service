@@ -1,6 +1,11 @@
 export const routes = {
   hello: {
-    methods: ['GET', 'POST'],
+    methods: ['DELETE', 'GET', 'PATCH', 'POST', 'PUT'],
+    children: {
+      $name: {
+        methods: ['GET'],
+      },
+    },
   },
 };
 

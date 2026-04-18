@@ -30,13 +30,29 @@ bun install
 bun run dev          # http://localhost:8787
 ```
 
-## Add Endpoint
+## Routes Management
+
+### Scaffold (Config → Files)
+Sync `routes.config.ts` ke filesystem. Generate file yang belum ada, hapus yang tidak terdaftar.
 
 ```bash
-# Generate handler file
+bun run scaffold
+```
+
+### Dump (Files → Config)
+Scan folder `src/data/` dan update `routes.config.ts` sesuai file yang ada.
+
+```bash
+bun run dump:routes
+```
+
+### Create Single Endpoint
+Generate satu file handler:
+
+```bash
 bun run create:endpoint
 
-# Or manual - create file in src/data/
+# Atau manual
 touch src/data/users/GET.ts
 ```
 

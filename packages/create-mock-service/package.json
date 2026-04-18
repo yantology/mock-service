@@ -1,6 +1,6 @@
 {
   "name": "create-mock-service",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "CLI tool untuk generate mock API service project",
   "type": "module",
   "bin": {
