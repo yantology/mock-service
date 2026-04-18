@@ -1,0 +1,30 @@
+$schema: "https://moonrepo.dev/schemas/project.json"
+
+language: "typescript"
+tags: ["mock", "api", "dev-tool"]
+
+project:
+  name: "mock-service"
+  description: "Modern mock API for Basagram with testing utilities"
+
+fileGroups:
+  sources:
+    - "src/**/*"
+    - "scripts/**/*"
+    - "tsconfig.json"
+
+tasks:
+  dev:
+    command: "bun run dev"
+    description: "Start mock service with hot reload"
+    options:
+      cache: false
+      runInCI: false
+
+  lint:
+    command: "bun run lint"
+    description: "Type-check the mock service"
+
+  build:
+    command: "bun run build"
+    description: "Generate route manifest, contracts, and type-check"

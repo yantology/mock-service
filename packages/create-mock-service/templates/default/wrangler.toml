@@ -1,0 +1,13 @@
+name = "basagram-mock-service"
+main = "src/index.ts"
+compatibility_date = "2024-04-01"
+
+# Account ID (set via CF_ACCOUNT_ID env or CLI)
+# account_id = ""
+
+[vars]
+ENVIRONMENT = "production"
+API_VERSION = "v2"
+
+[env.development]
+vars = { ENVIRONMENT = "development" }

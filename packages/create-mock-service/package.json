@@ -1,0 +1,32 @@
+{
+  "name": "create-mock-service",
+  "version": "1.0.1",
+  "description": "CLI tool untuk generate mock API service project",
+  "type": "module",
+  "bin": {
+    "create-mock-service": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "openapi",
+    "swagger",
+    "cloudflare",
+    "workers",
+    "hono",
+    "cli",
+    "generator"
+  ],
+  "author": "Yantology",
+  "license": "MIT"
+}

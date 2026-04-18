@@ -1,0 +1,25 @@
+{
+  "name": "@basagram/mock-service",
+  "version": "2.0.0",
+  "description": "Modern mock API service for Basagram - local dev & Cloudflare Workers",
+  "type": "module",
+  "scripts": {
+    "build:routes": "bun run scripts/build-routes.ts",
+    "build": "bun run build:routes && bun run lint",
+    "create:endpoint": "bun run scripts/create-endpoint.ts",
+    "dev": "concurrently \"bun run --watch scripts/build-routes.ts\" \"wrangler dev --env development\"",
+    "dump:routes": "bun run scripts/dump-routes.ts",
+    "lint": "tsc --noEmit",
+    "scaffold": "bun run scripts/scaffold.ts"
+  },
+  "dependencies": {
+    "hono": "^4.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240401.0",
+    "@types/node": "^25.6.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.78.0"
+  }
+}
