@@ -295,6 +295,9 @@ async function build() {
   const entries = scan(DATA_DIR);
   detectCollision(entries, mockConfig.openApiPath, 'openApi');
   detectCollision(entries, mockConfig.docsPath, 'docs');
+
+  mkdirSync(join(__dirname, '..', 'src', 'generated'), { recursive: true });
+
   buildRoutes(entries);
   await buildOpenApi(entries);
 }
